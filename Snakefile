@@ -8,7 +8,7 @@ shell.suffix("; exitstat=$?; echo END at $(date); echo exit status was $exitstat
 FILES = json.load(open('./samples.json'))
 SAMPLES = sorted(FILES.keys())
 
-configfile: "config.yaml"
+
     
 
 TARGETS = []
