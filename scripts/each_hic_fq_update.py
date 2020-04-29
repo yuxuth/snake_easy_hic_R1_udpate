@@ -11,12 +11,12 @@ def update_fastq(r1,r2, out_r1,out_r2,barcode_log_file ): ## process two files
     total_read = 0
     keep_read = 0
     while True:
-        cur_r1_name = f_r1.readline().strip()[1:]
+        cur_r1_name = f_r1.readline().strip()
         cur_r1_read = f_r1.readline().strip()
         cur_r1_plus = f_r1.readline().strip()
         cur_r1_qual = f_r1.readline().strip()
         
-        cur_r2_name = f_r2.readline().strip()[1:]
+        cur_r2_name = f_r2.readline().strip()
         cur_r2_read = f_r2.readline().strip()
         cur_r2_plus = f_r2.readline().strip()
         cur_r2_qual = f_r2.readline().strip()
