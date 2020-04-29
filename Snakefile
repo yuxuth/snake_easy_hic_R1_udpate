@@ -34,14 +34,16 @@ rule extract_index_fq:
 rule gzip_r1:  
     input : "01_fq_r1_update/{sample}_hindIII_filted_L001_R1_001.fastq"
     output: "01_fq_r1_update/{sample}_hindIII_filted_L001_R1_001.fastq.gz"
+    threads: 12
     shell: 
         """
-        gzip {input}
+        pigz -p {threads}  {input}
         """
 rule gzip_r2:  
     input : "01_fq_r1_update/{sample}_hindIII_filted_L001_R2_001.fastq"
     output: "01_fq_r1_update/{sample}_hindIII_filted_L001_R2_001.fastq.gz"
+    threads: 12
     shell: 
         """
-        gzip {input}
+        pigz -p {threads}  {input}
         """
